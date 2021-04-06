@@ -1,0 +1,5 @@
+-glove pretrained 100d word embedding: 
+https://nlp.stanford.edu/projects/glove/
+
+-labeled comments used for training / testing:
+https://ai.stanford.edu/~amaas/data/sentiment/
