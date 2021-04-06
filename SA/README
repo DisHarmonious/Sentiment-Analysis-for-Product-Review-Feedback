@@ -1,0 +1,14 @@
+IDEA:
+This is a system for (near) Real Time Sentiment Analysis for product review feedback. The idea is that after people use our product, we will track their overall sentiment.
+
+OVERVIEW:
+-I trained 2 deep learning models using convolutional neural networks, with pretrained word embeddings (glove 100d) and as a training dataset I used the ACL imdb dataset. One model was trained with 20 epochs ("CNN_WE_20e" - convolutional neural network, word embeddings, 20 epochs) and the other was trained with 50 epochs ("CNN_WE_50e).  I purposely omit loading the dataset as the code is highly reproducible.
+-After we trained and stored the models, we built a web page ("site.py") where users of our product will go to, in order to provide their feedback. Whenever a new comment is submitted, it is passed to an sqlite db (table "comments"). 
+-By running the main in "predictor.py" we load the previous models, and every 5 seconds we perform the following operations: 1. we get the comments in the sqlite db that have not been processed, 2. we use a model to perform a prediction (by using adjusted weights to simulate a meta-algorithm), 3. we store our predictions, 4. update our db so that we know which comments have been evaluated.
+
+POSSIBLE IMPROVEMENTS:
+-train in distributed manner using gpus\par
+-build a more elaborate meta-algorithm\par
+-improved front-end\par
+-better training data\par
+-also evaluate for aggressive language (threatening, racist, sexist etc.)
