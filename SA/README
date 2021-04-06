@@ -7,8 +7,8 @@ OVERVIEW:
 -By running the main in "predictor.py" we load the previous models, and every 5 seconds we perform the following operations: 1. we get the comments in the sqlite db that have not been processed, 2. we use a model to perform a prediction (by using adjusted weights to simulate a meta-algorithm), 3. we store our predictions, 4. update our db so that we know which comments have been evaluated.
 
 POSSIBLE IMPROVEMENTS:
--train in distributed manner using gpus\par
--build a more elaborate meta-algorithm\par
--improved front-end\par
--better training data\par
+-train in distributed manner using gpus
+-build a more elaborate meta-algorithm
+-improved front-end
+-better training data
 -also evaluate for aggressive language (threatening, racist, sexist etc.)
