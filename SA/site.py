@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///db.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db=SQLAlchemy(app)
 
-os.chdir(r"C:\Users\User\Desktop\pyspark_project\my_module")
+os.chdir(r"C:\Users\User\Desktop\SA_project\my_module")
 con=sqlite3.connect("db.sqlite", check_same_thread=False)
 cur = con.cursor()
 
